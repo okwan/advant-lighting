@@ -24,34 +24,34 @@
 		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 		<!-- Font Awesome CSS -->
-		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
 		<!-- Fontello CSS -->
-		<link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/fonts/fontello/css/fontello.css" rel="stylesheet">
 
 		<!-- Plugins -->
-		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-		<link href="plugins/rs-plugin/css/settings.css" rel="stylesheet">
-		<link href="css/animations.css" rel="stylesheet">
-		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
-		<link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
-		<link href="plugins/hover/hover-min.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/plugins/rs-plugin/css/settings.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/css/animations.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/plugins/hover/hover-min.css" rel="stylesheet">
 
 		<!-- The Project's core CSS file -->
-		<link href="css/style.css" rel="stylesheet" >
+		<link href="<?php bloginfo('stylesheet_directory');?>/css/style.css" rel="stylesheet" >
 		<!-- The Project's Typography CSS file, includes used fonts -->
 		<!-- Used font for body: Roboto -->
 		<!-- Used font for headings: Raleway -->
-		<link href="css/typography-default.css" rel="stylesheet" >
+		<link href="<?php bloginfo('stylesheet_directory');?>/css/typography-default.css" rel="stylesheet" >
 		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
-		<link href="css/skins/dark_red.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/css/skins/dark_red.css" rel="stylesheet">
 
 
 		<!-- Custom css -->
-		<link href="css/custom.css" rel="stylesheet">
+		<link href="<?php bloginfo('stylesheet_directory');?>/css/custom.css" rel="stylesheet">
 	</head>
 
 	<!-- body classes:  -->
@@ -117,7 +117,7 @@
 
 									<!-- logo -->
 									<div id="logo" class="logo">
-										<a href="index.php"><img id="logo_img" src="images/logo_light_blue.png" alt="The Project"></a>
+										<a href="/index.php"><img id="logo_img" src="images/logo_light_blue.png" alt="The Project"></a>
 									</div>
 
 									<!-- name-and-slogan -->
@@ -158,34 +158,14 @@
 
 											</div>
 
-											<!-- Collect the nav links, forms, and other content for toggling -->
-											<div class="collapse navbar-collapse" id="navbar-collapse-1">
-												<!-- main-menu -->
-												<ul class="nav navbar-nav ">
-
-													<!-- mega-menu start -->
-													<li class="active mega-menu">
-														<a href="index.html">Home</a>
-													</li>
-													<!-- mega-menu end -->
-													<!-- mega-menu start -->
-													<li class="mega-menu">
-														<a href="about.html">About</a>
-													</li>
-													<!-- mega-menu end -->
-													<!-- mega-menu start -->
-													<li class="mega-menu">
-														<a href="shop.html">Shop</a>
-													</li>
-													<!-- mega-menu end -->
-													<!-- mega-menu start -->
-													<li class="mega-menu">
-														<a href="contact.html">Contact</a>
-													</li>
-													<!-- mega-menu end -->
-												</ul>
-											</div>
-
+												<?php
+												 	wp_nav_menu( array (
+														'theme_location'	=> 'primary',
+														'container'				=> 'nav',
+														'container_class'	=> 'navbar-collapse collapse',
+														'menu_class'			=> 'nav navbar-nav navbar-right'
+													));
+												?>
 												<!-- main-menu end -->
 
 												<!-- header dropdown buttons -->
