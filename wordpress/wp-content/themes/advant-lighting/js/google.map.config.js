@@ -6,8 +6,8 @@
 		if ($("#map-canvas").length>0) {
 			var map, myLatlng, myZoom, marker;
 			// Set the coordinates of your location
-			myLatlng = new google.maps.LatLng(41.38791700, 2.16991870);
-			myZoom = 12;
+			myLatlng = new google.maps.LatLng(49.206241, -123.143597);
+			myZoom = 15;
 			function initialize() {
 				var mapOptions = {
 					zoom: myZoom,
@@ -30,4 +30,4 @@
 		}
 	}); // End document ready
 
-})(this.jQuery);		
+})(this.jQuery);

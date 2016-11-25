@@ -21,14 +21,14 @@
 				<div class="row">
 					<div class="col-md-8">
 						<ul class="list-inline hidden-sm hidden-xs">
-							<li><i class="fa fa-map-marker pr-5 pl-10"></i>One Infinity Loop Av, Tk 123456</li>
-							<li><i class="fa fa-phone pr-5 pl-10"></i>+12 123 123 123</li>
-							<li><i class="fa fa-envelope-o pr-5 pl-10"></i> theproject@mail.com</li>
+							<li><i class="fa fa-map-marker pr-5 pl-10"></i>1590 Rand Avenue Vancouver BC V6P 3G2 Canada</li>
+							<li><i class="fa fa-phone pr-5 pl-10"></i>+604 207 6998</li>
+							<li><i class="fa fa-envelope-o pr-5 pl-10"></i> info@advantlighting.ca</li>
 						</ul>
 					</div>
 					<div class = "col-md-4 text-right">
 						<ul class="list-inline hidden-sm hidden-xs">
-							<li>Double 0 Studios</li>
+							<li>Developed by Double 0 Studios</li>
 						</ul>
 					</div>
 				</div>
@@ -65,6 +65,9 @@
 <script src="<?php bloginfo('stylesheet_directory');?>/plugins/jquery.parallax-1.1.3.js"></script>
 <!-- Contact form -->
 <script src="<?php bloginfo('stylesheet_directory');?>/plugins/jquery.validate.js"></script>
+<!-- Google Maps javascript -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCzCHbsJogTL6l1QTNLfDTy9O2vwFecFSM"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/google.map.config.js"></script>
 <!-- Background Video -->
 <script src="<?php bloginfo('stylesheet_directory');?>/plugins/vide/jquery.vide.js"></script>
 <!-- Owl carousel javascript -->
