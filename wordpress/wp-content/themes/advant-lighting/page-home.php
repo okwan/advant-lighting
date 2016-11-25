@@ -1,5 +1,8 @@
 <?php
 /* Template Name: Home Page */
+
+$product_header_description = get_field('product_header_description');
+
  get_header(); ?>
 
 
@@ -249,119 +252,35 @@
  	<div class="container">
  		<div class="row">
  			<div class="col-md-8 col-md-offset-2">
- 				<h1 class="text-center">Sectors and Services</h1>
+ 				<h1 class="text-center">Our products</h1>
  				<div class="separator"></div>
- 				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quibusdam enim, voluptates autem officia eius accusantium repellat debitis, omnis reiciendis. Assumenda, recusandae cupiditate odit, similique quia voluptates vitae veniam aperiam.</p>
+ 				<p class="text-center"><?php echo $product_header_description; ?></p>
  				<br>
  				<br>
  			</div>
  		</div>
  		<div class="row">
+      <?php $loop = new WP_Query( array ( 'post_type' => 'categories_product', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
+      <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+
  			<div class="col-sm-4">
  				<div class="image-box text-center style-2 mb-20">
  					<div class="overlay-container overlay-visible">
- 						<img src="images/product_test-1.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
+ 						<img src= <?php the_post_thumbnail(); ?>
+ 						<a href="advant-lighting/wordpress/shop" class="overlay-link"></a>
  						<div class="overlay-bottom hidden-xs">
  							<div class="text">
- 								<p class="lead margin-clear">Service One</p>
+ 								<p class="lead margin-clear"><?php the_title(); ?></p>
  							</div>
  						</div>
  					</div>
  					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
  					</div>
  				</div>
  			</div>
- 			<div class="col-sm-4">
- 				<div class="image-box text-center style-2 mb-20">
- 					<div class="overlay-container overlay-visible">
- 						<img src="images/corporate-5-service-2.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
- 						<div class="overlay-bottom hidden-xs">
- 							<div class="text">
- 								<p class="lead margin-clear">Service Two</p>
- 							</div>
- 						</div>
- 					</div>
- 					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="col-sm-4">
- 				<div class="image-box text-center style-2 mb-20">
- 					<div class="overlay-container overlay-visible">
- 						<img src="images/corporate-5-service-3.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
- 						<div class="overlay-bottom hidden-xs">
- 							<div class="text">
- 								<p class="lead margin-clear">Service Three</p>
- 							</div>
- 						</div>
- 					</div>
- 					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
- 		<div class="row">
- 			<div class="col-sm-4">
- 				<div class="image-box text-center style-2 mb-20">
- 					<div class="overlay-container overlay-visible">
- 						<img src="images/corporate-5-service-4.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
- 						<div class="overlay-bottom hidden-xs">
- 							<div class="text">
- 								<p class="lead margin-clear">Service Four</p>
- 							</div>
- 						</div>
- 					</div>
- 					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="col-sm-4">
- 				<div class="image-box text-center style-2 mb-20">
- 					<div class="overlay-container overlay-visible">
- 						<img src="images/corporate-5-service-5.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
- 						<div class="overlay-bottom hidden-xs">
- 							<div class="text">
- 								<p class="lead margin-clear">Service Five</p>
- 							</div>
- 						</div>
- 					</div>
- 					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="col-sm-4">
- 				<div class="image-box text-center style-2 mb-20">
- 					<div class="overlay-container overlay-visible">
- 						<img src="images/corporate-5-service-6.jpg" alt="">
- 						<a href="#" class="overlay-link"><i class="fa fa-link"></i></a>
- 						<div class="overlay-bottom hidden-xs">
- 							<div class="text">
- 								<p class="lead margin-clear">Service Six</p>
- 							</div>
- 						</div>
- 					</div>
- 					<div class="body padding-horizontal-clear">
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
- 						<a class="link-dark" href="#">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
+
+      <?php endwhile; ?>
  	</div>
  </section>
  <!-- section end -->

@@ -105,8 +105,9 @@
 												<li>
 													<form role="search" class="search-box margin-clear">
 														<div class="form-group has-feedback">
-															<input type="text" class="form-control" placeholder="Search">
-															<i class="icon-search form-control-feedback"></i>
+															<?php get_search_form(); ?>
+															<!-- <input type="text" class="form-control" placeholder="Search">
+															<i class="icon-search form-control-feedback"></i> -->
 														</div>
 													</form>
 												</li>
@@ -176,8 +177,7 @@
 															<li>
 																<form role="search" class="search-box margin-clear">
 																	<div class="form-group has-feedback">
-																		<input type="text" class="form-control" placeholder="Search">
-																		<i class="icon-search form-control-feedback"></i>
+																		<?php get_search_form(); ?>
 																	</div>
 																</form>
 															</li>
