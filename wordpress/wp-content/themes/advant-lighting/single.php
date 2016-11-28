@@ -8,6 +8,26 @@
  */
 
 $price = get_field("price_product");
+$spec_title_1 = get_field("spec_title_1");
+$spec_title_2 = get_field("spec_title_2");
+$spec_title_3 = get_field("spec_title_3");
+$spec_title_4 = get_field("spec_title_4");
+$spec_title_5 = get_field("spec_title_5");
+$spec_title_6 = get_field("spec_title_6");
+$spec_title_7 = get_field("spec_title_7");
+$spec_title_8 = get_field("spec_title_8");
+$spec_title_9 = get_field("spec_title_9");
+$spec_title_10 = get_field("spec_title_10");
+$spec_desc_1 = get_field("spec_desc_1");
+$spec_desc_2 = get_field("spec_desc_2");
+$spec_desc_3 = get_field("spec_desc_3");
+$spec_desc_4 = get_field("spec_desc_4");
+$spec_desc_5 = get_field("spec_desc_5");
+$spec_desc_6 = get_field("spec_desc_6");
+$spec_desc_7 = get_field("spec_desc_7");
+$spec_desc_8 = get_field("spec_desc_8");
+$spec_desc_9 = get_field("spec_desc_9");
+$spec_desc_10 = get_field("spec_desc_10");
 
 get_header(); ?>
 	<!-- main-container start -->
@@ -31,37 +51,10 @@ get_header(); ?>
 
 					<div class="row">
 						<div class="col-md-4">
-							<!-- pills start -->
-							<!-- ================ -->
-							<!-- Nav tabs -->
-							<ul class="nav nav-pills" role="tablist">
-								<li class="active"><a href="#pill-1" role="tab" data-toggle="tab" title="images"><i class="fa fa-camera pr-5"></i> Photo</a></li>
-								<li><a href="#pill-2" role="tab" data-toggle="tab" title="video"><i class="fa fa-video-camera pr-5"></i> Video</a></li>
-							</ul>
-							<!-- Tab panes -->
-							<div class="tab-content clear-style">
-								<div class="tab-pane active" id="pill-1">
-									<div class="owl-carousel content-slider-with-large-controls">
-										<div class="overlay-container overlay-visible">
-											<img src=<?php the_post_thumbnail(); ?>>
-											<a href="images/product-1.jpg" class="popup-img overlay-link" title="image title"><i class="icon-plus-1"></i></a>
-										</div>
-										<div class="overlay-container overlay-visible">
-											<img src="images/product-1-2.jpg" alt="">
-											<a href="images/product-1-2.jpg" class="popup-img overlay-link" title="image title"><i class="icon-plus-1"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane" id="pill-2">
-									<div class="embed-responsive embed-responsive-16by9">
-										<iframe class="embed-responsive-item" src="//player.vimeo.com/video/29198414?byline=0&amp;portrait=0"></iframe>
-										<p><a href="http://vimeo.com/29198414">Introducing Vimeo Music Store</a> from <a href="http://vimeo.com/staff">Vimeo Staff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-									</div>
-								</div>
-							</div>
-							<!-- pills end -->
+								<img src=<?php the_post_thumbnail(); ?>
+								<a class="" title=""></a>
 						</div>
-						<div class="col-md-8 pv-30">
+						<div class="col-md-8">
 							<h2>Description</h2>
 							<?php the_content(); ?>
 							<hr class="mb-10">
@@ -76,7 +69,6 @@ get_header(); ?>
 					</div>
 				</div>
 				<!-- main end -->
-
 			</div>
 		</div>
 	</section>
@@ -95,8 +87,6 @@ get_header(); ?>
 					<!-- Tab panes -->
 					<div class="tab-content padding-top-clear padding-bottom-clear">
 						<div class="tab-pane fade in active" id="h2tab2">
-							<h4 class="space-top">Specifications</h4>
-							<hr>
 							<dl class="dl-horizontal">
 								<dt>Model</dt>
 								<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
